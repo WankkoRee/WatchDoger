@@ -88,6 +88,11 @@ func key(input *bufio.Reader, conn net.Conn, runState *bool) {
 	}
 }
 
+func init() {
+	fmt.Printf("WatchDoger Client %s\n", "v1.0.0")
+	fmt.Printf("---- ---- ---- ----\n")
+}
+
 func main() {
 	runState := true
 	var err error = nil

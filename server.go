@@ -107,6 +107,11 @@ func sender(conn net.Conn, display *bufio.Reader, runState *bool, listenState *b
 	}
 }
 
+func init() {
+	fmt.Printf("WatchDoger Server %s\n", "v1.0.0")
+	fmt.Printf("---- ---- ---- ----\n")
+}
+
 func main() {
 	args := os.Args
 	if len(args) <= 1 {
