@@ -6,6 +6,8 @@
 - 全程使用本机`127.0.0.1`网络，无需外网与web，更不需要导出端口。
   > 对标`GoTTY`了属于是……
 
+![screenshot](screenshots/a92fcd4a028cd76a5a128cc496fd4129.gif)
+
 ## 适用情境
 
 当你在`Docker`容器中运行了一个需要输入输出的可交互命令（如[mirai-console-loader]( https://github.com/iTXTech/mirai-console-loader )），你只能望着日志干瞪眼，或者冒着容器被你退出时顺手玄学关闭的风险执行`docker attach`。
