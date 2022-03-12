@@ -10,15 +10,15 @@
 
 ## 适用情境
 
-当你在`Docker`容器中运行了一个需要输入输出的可交互命令（如[mirai-console-loader]( https://github.com/iTXTech/mirai-console-loader )），你只能望着日志干瞪眼，或者冒着容器被你退出时顺手玄学关闭的风险执行`docker attach`。
+当你在`Docker`容器中运行了一个需要输入输出的可交互命令（如[mirai-console-loader]( https://github.com/iTXTech/mirai-console-loader )），你只能望着日志干瞪眼，或者冒着`Docker`容器被你退出时顺手玄学关闭的风险执行`docker attach`。
 
-但是现在，你可以选择在你的容器中加入`WatchDoger`，只需要在原本的启动命令行前加上`server`，即可通过`docker exec`进入容器执行`client`来连接到目标命令行。
+但是现在，你可以选择在你的`Docker`容器中加入`WatchDoger`，只需要在原本的启动命令行前加上`server`，即可通过`docker exec`进入`Docker`容器执行`client`来连接到目标命令行。
 
 ## 使用
 
-1. 容器启动时用server启动目标bash
+1. `Docker`容器启动时用`server`启动目标`"bash"`
 
-   如在`docker-compose.yml`的`command`下将原来的可交互命令之前加上`server`即可。
+   如在`docker-compose.yml`的`command`下将原来的可交互命令之前加上`server `即可。
 
    ```yaml
    version: "3"
@@ -29,7 +29,7 @@
        command: /bin/bash -c "chmod +x ./demobsah && chmod +x ./server && chmod +x ./client && ./server ./demobsah demoArg1 /demoArg2 -demoArg3"
    ```
 
-2. 需要交互时进入容器开启client连上server
+2. 需要交互时进入`Docker`容器开启`client`连上`server`
 
    ```shell
    docker exec -it demo bash
