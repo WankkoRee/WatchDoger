@@ -107,8 +107,10 @@ func sender(conn net.Conn, display *bufio.Reader, runState *bool, listenState *b
 	}
 }
 
+var version = ""
+
 func init() {
-	fmt.Printf("WatchDoger Server %s\n", "v1.0.0")
+	fmt.Printf("WatchDoger Client %s\n", version)
 	fmt.Printf("---- ---- ---- ----\n")
 }
 

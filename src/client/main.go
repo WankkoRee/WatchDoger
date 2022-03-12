@@ -88,8 +88,10 @@ func key(input *bufio.Reader, conn net.Conn, runState *bool) {
 	}
 }
 
+var version = ""
+
 func init() {
-	fmt.Printf("WatchDoger Client %s\n", "v1.0.0")
+	fmt.Printf("WatchDoger Client %s\n", version)
 	fmt.Printf("---- ---- ---- ----\n")
 }
 
