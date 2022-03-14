@@ -31,12 +31,23 @@
 
 2. 需要交互时进入`Docker`容器开启`client`连上`server`
 
+   - 通过`/bin/bash`进入`client`
    ```shell
    docker exec -it demo bash
    root@demo:~# ./client
    > 2022/03/12 21:08:08 建立连接成功
    #在这开始你的正常交互吧
    ```
+    - 直接进入`client`
+   ```shell
+   docker exec -it demo ./client
+   > 2022/03/12 21:08:08 建立连接成功
+   #在这开始你的正常交互吧
+   ```
+
+## 最佳实践
+
+- [SchoolPowerCrawlerAndDisplayor](https://github.com/WankkoRee/SchoolPowerCrawlerAndDisplayor) 的`school_power_mirai`容器部分。
 
 ## Q&A
 
